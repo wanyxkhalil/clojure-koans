@@ -19,9 +19,9 @@
 (defn factorial [n]
   (loop [n n
          res 1]
-    (if (< n 2)
+    (if (zero? n)
       res
-      (recur (* n (dec n)) (dec n)))))
+      (recur (dec n) (* res n)))))
 
 (meditations
   "Recursion ends with a base case"
